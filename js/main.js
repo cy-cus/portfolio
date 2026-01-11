@@ -127,22 +127,20 @@ function runCommand(raw) {
 
   if (cmd === 'help' || cmd === '--help') {
     if (heroTerminalOutput) {
-      const help = document.createElement('div');
+      const help = document.createElement('div')
       help.innerHTML = `
         <div class="terminal__help">
-          <div>available commands:</div>
-          <div><span class="terminal__cmd">about</span> - professional summary</div>
-          <div><span class="terminal__cmd">experience</span> - roles and highlights</div>
-          <div><span class="terminal__cmd">skills</span> - tools and technical focus</div>
-          <div><span class="terminal__cmd">contact</span> - email and profiles</div>
-          <div><span class="terminal__cmd">articles</span> - open Medium</div>
-          <div><span class="terminal__cmd">clear</span> - clear the terminal</div>
+          <div>commands:</div>
+          <div><span class="terminal__cmd">about</span> – summary</div>
+          <div><span class="terminal__cmd">experience</span> – roles</div>
+          <div><span class="terminal__cmd">skills</span> – stack</div>
+          <div><span class="terminal__cmd">contact</span> – reach out</div>
         </div>
-      `;
-      heroTerminalOutput.appendChild(help);
-      heroTerminalOutput.scrollTop = heroTerminalOutput.scrollHeight;
+      `
+      heroTerminalOutput.appendChild(help)
+      heroTerminalOutput.scrollTop = heroTerminalOutput.scrollHeight
     }
-    return;
+    return
   }
 
   if (cmd === 'contact' || cmd === '/contact') {
